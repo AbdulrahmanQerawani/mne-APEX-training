@@ -9,8 +9,8 @@ CREATE OR REPLACE FORCE EDITIONABLE VIEW "VACATION_INSTANCE_VW" ("VACATION_ID", 
      , inbx.link_text
   from VACATIONS vac
   join flow_task_inbox_vw inbx on vac.VACATION_ID = to_number(inbx.sbfl_business_ref default -1 on conversion error)
- where inbx.sbfl_dgrm_name = 'Diagram name'
+ /*where inbx.sbfl_dgrm_name = 'Diagram name'
  and inbx.sbfl_current in ('sub-process1','sub-process2')
- and inbx.sbfl_current_lane = 'EMPLOYEE'
+ and inbx.sbfl_current_lane = 'EMPLOYEE'*/
  WITH READ ONLY
 /
